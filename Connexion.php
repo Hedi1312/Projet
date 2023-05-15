@@ -5,7 +5,7 @@ class Connexion {
 
     public function __construct () {
     }
-af
+
     public static function initConnexion() {
         try {
 
