@@ -1,10 +1,10 @@
-#   Creation de la base de donnees nommee : site
+#   Creation de la base de donnees nommee : site_efrei
 
 
-DROP SCHEMA IF EXISTS site ;
-CREATE SCHEMA IF NOT EXISTS site;
+DROP SCHEMA IF EXISTS site_efrei ;
+CREATE SCHEMA IF NOT EXISTS site_efrei;
 
-# set search_path to site;
+# set search_path to site_efrei;
 
 
 # Creation des tables
@@ -14,7 +14,7 @@ CREATE SCHEMA IF NOT EXISTS site;
 #------------------------------------------------------------
 
 
-CREATE TABLE if not exists site.utilisateur(
+CREATE TABLE if not exists site_efrei.utilisateur(
     idUtilisateur int (100) Auto_increment  NOT NULL ,
     prenom        Varchar (100) NOT NULL ,
     nom           Varchar (100) NOT NULL ,
@@ -29,7 +29,7 @@ CREATE TABLE if not exists site.utilisateur(
 #------------------------------------------------------------
 
 
-CREATE TABLE if not exists site.identifiants(
+CREATE TABLE if not exists site_efrei.identifiants(
     idLogin       int (100) Auto_increment  NOT NULL ,
     login         Varchar (200) NOT NULL ,
     password      Text NOT NULL ,
@@ -37,4 +37,4 @@ CREATE TABLE if not exists site.identifiants(
     UNIQUE (login)
 );
 
-ALTER TABLE site.utilisateur ADD CONSTRAINT FK_Utilisateur_idLogin FOREIGN KEY (idLogin) REFERENCES site.identifiants(idLogin)ON UPDATE cascade ON DELETE cascade;
+ALTER TABLE site_efrei.utilisateur ADD CONSTRAINT FK_Utilisateur_idLogin FOREIGN KEY (idLogin) REFERENCES site_efrei.identifiants(idLogin)ON UPDATE cascade ON DELETE cascade;
