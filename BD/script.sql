@@ -10,31 +10,15 @@ CREATE SCHEMA IF NOT EXISTS site_efrei;
 # Creation des tables
 
 #------------------------------------------------------------
-# Table: Utilisateur
+# Table: vendeurs
 #------------------------------------------------------------
 
 
-CREATE TABLE if not exists site_efrei.utilisateur(
-    idUtilisateur int (100) Auto_increment  NOT NULL ,
-    prenom        Varchar (100) NOT NULL ,
+CREATE TABLE if not exists site_efrei.vendeurs(
+    idVendeur     int (100) Auto_increment  NOT NULL ,
+    pseudo        Varchar (100) NOT NULL ,
+    email         Varchar (100) NOT NULL ,
     nom           Varchar (100) NOT NULL ,
-    age           Smallint NOT NULL ,
-    idLogin       Int NOT NULL,
-    UNIQUE(idLogin),
-    PRIMARY KEY (idUtilisateur )
+    UNIQUE(email),
+    PRIMARY KEY (idVendeur)
 );
-
-#------------------------------------------------------------
-# Table: Identifiants
-#------------------------------------------------------------
-
-
-CREATE TABLE if not exists site_efrei.identifiants(
-    idLogin       int (100) Auto_increment  NOT NULL ,
-    login         Varchar (200) NOT NULL ,
-    password      Text NOT NULL ,
-    PRIMARY KEY (idLogin ) ,
-    UNIQUE (login)
-);
-
-ALTER TABLE site_efrei.utilisateur ADD CONSTRAINT FK_Utilisateur_idLogin FOREIGN KEY (idLogin) REFERENCES site_efrei.identifiants(idLogin)ON UPDATE cascade ON DELETE cascade;

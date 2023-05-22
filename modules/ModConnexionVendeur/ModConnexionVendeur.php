@@ -1,13 +1,13 @@
 <?php
 
-require_once "./modules/ModConnexion/cont_connexion.php";
+require_once "./modules/ModConnexionVendeur/cont_connexionVendeurVendeur.php";
 
-class ModConnexion{
+class ModConnexionVendeur{
     private $controleur;
 
     function __construct(){
 
-        $this->controleur = new ContConnexion();
+        $this->controleur = new ContConnexionVendeur();
 
 
         if (isset($_GET['action'])) {

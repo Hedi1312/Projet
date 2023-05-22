@@ -1,10 +1,10 @@
 <?php
 
 require_once "./Vue/Vue.php";
-class VueInscription{
+class VueInscriptionVendeur{
  
     function form_inscription() {
-        Vue::render("Affichage/inscription.php",["titre"=>"Inscription"]);
+        Vue::render("Affichage/inscriptionVendeur.php",["titre"=>"Inscription Vendeur"]);
     }
 
     function alerte_message($message,$alerte,$url) {
@@ -12,11 +12,9 @@ class VueInscription{
     }
 
     function form_connexion() {
-        Vue::render("Affichage/connexion.php",["titre"=>"Connexion"]);
+        Vue::render("Affichage/connexionVendeur.php",["titre"=>"Connexion Vendeur"]);
     }
 
-
 }
-
 
 ?>

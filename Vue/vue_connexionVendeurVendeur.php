@@ -1,10 +1,10 @@
 <?php
 
 require_once "./Vue/Vue.php";
-class VueConnexion {
+class VueConnexionVendeur {
 
     function form_connexion() {
-        Vue::render("Affichage/connexion.php",["titre"=>"Connexion"]);
+        Vue::render("Affichage/connexionVendeur.php",["titre"=>"Connexion Vendeur"]);
     }
 
     function alerte_message($message,$alerte,$url) {

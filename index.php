@@ -13,8 +13,12 @@ else {
 Connexion::initConnexion();
 
 switch ($module) {
-    case "ModConnexion":
-    case "ModInscription":
+    case "ModConnexionVendeur":
+    case "ModInscriptionVendeur":
+    case "ModConnexionAcheteur":
+    case "ModInscriptionAcheteur":
+    case "ModConnexionAdministrateur":
+    case "ModInscriptionAdministrateur":
     case "ModAccueil":
         require_once "./modules/$module/$module.php";
         new $module();
