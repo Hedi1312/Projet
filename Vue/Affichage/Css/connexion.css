@@ -2,6 +2,8 @@
     background-color: white;
     border-radius: 20px;
     margin-top: 5%;
+    padding: 20px;
+    width: 100%;
 }
 
 #h1Vendeur{
@@ -10,9 +12,28 @@
     text-decoration: underline;
 }
 
-#log_img{
-    border-radius: 20px;
+#imageConnexion{
+    float: left;
 }
+
+#buttonConnexionAccueil{
+    float: right;
+    margin-top: auto;
+
+}
+
+#buttonConnexionAccueil > a{
+    display: block;
+    margin-bottom: 30px;
+}
+
+#h2connexionAccueil{
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+
 
 .divider:after,
 .divider:before {

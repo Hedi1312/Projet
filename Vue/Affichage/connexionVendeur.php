@@ -3,7 +3,7 @@
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="Vue/Affichage/img/pageVendeur.png" class="img-fluid" alt="Sample image" id="log_img">
+                <img src="Vue/Affichage/img/vendeur.png" class="img-fluid" alt="vendeur image" id="log_img">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form action="index.php?module=ModConnexionVendeur&action=connexion" method="POST">
@@ -23,7 +23,6 @@
 
                     <div class="text-center text-lg-start mt-4 pt-2">
                         <button type="submit" class="btn btn-primary btn-lg"  style="padding-left: 2.5rem; padding-right: 2.5rem;" value="Connexion">Connexion</button>
-                        <p class="small fw-bold mt-2 pt-1 mb-0"style="color: black;">Vous n'avez pas de compte ? <a href="index.php?module=ModInscriptionVendeur" class="link-danger">Inscription</a></p>
                     </div>
 
                 </form>

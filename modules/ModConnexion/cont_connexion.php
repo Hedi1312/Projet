@@ -1,7 +1,7 @@
 <?php
 
-require_once "./Vue/vue_connexionVendeurVendeur.php";
-require_once "./modules/ModConnexion/modele_connexionVendeurVendeur.php";
+require_once "./Vue/vue_connexion.php";
+require_once "./modules/ModConnexion/modele_connexion.php";
 
 class ContConnexionVendeur {
     private $modele;
@@ -12,8 +12,20 @@ class ContConnexionVendeur {
         $this->modele = new ModeleConnexionVendeur();
     }
 
-    function test_connexion () {
-        $this->vue->form_connexion();
+    function accueil () {
+        $this->vue->accueil();
+    }
+
+    function form_connexionVendeur () {
+        $this->vue->form_connexionVendeur();
+    }
+
+    function form_connexionAcheteur () {
+        $this->vue->form_connexionAcheteur();
+    }
+
+    function form_connexionAdmin () {
+        $this->vue->form_connexionAdmin();
     }
 
     function connexion () {
@@ -43,7 +55,7 @@ class ContConnexionVendeur {
 
     function deconnexion() {
         unset($_SESSION['login']);
-        $this->vue->form_connexion();
+        $this->vue->accueil();
     }
 }
 ?>
