@@ -1,0 +1,108 @@
+
+#accueil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#contact-section {
+    margin-top: auto; /* Ajoute une marge automatique en haut de la section */
+    display: flex; /* Utilise le modèle de boîte flexible */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: flex-end; /* Aligne les éléments au bas de la section */
+    padding: 71px;
+    border: 1px solid white; /* Ajoute une bordure de 1 pixel en couleur blanche */
+    border-radius: 10px; /* Ajoute un arrondi aux coins de la section */
+    box-sizing: border-box;
+}
+
+#google_maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#google_maps img {
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid orange;
+}
+
+
+
+.section {
+    flex: 1 1 45%; /* Ajustez les valeurs en fonction de vos besoins */
+    margin: 10px 10px 25px;
+    padding: 30px;
+    border: 1px solid white; /* Ajoute une bordure de 1 pixel en couleur blanche */
+    border-radius: 10px; /* Ajoute un arrondi aux coins de la section */
+    box-sizing: border-box;
+}
+
+.classe-h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+    color: white; /* Couleur de police blanche */
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: white; /* Couleur de police blanche */
+}
+
+.classe-h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: white; /* Couleur de police blanche */
+    text-align: center;
+}
+
+.classe-h3 {
+    font-size: 32px;
+    color: white; /* Couleur de police blanche */
+    text-align: center;
+}
+
+
+
+.classe-h5 {
+    color: black;
+    border: 1px solid;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Pour les appareils avec une largeur d'écran jusqu'à 600px */
+@media only screen and (max-width: 600px) {
+    .classe-h5 {
+        font-size: 16px; /* Ajustez la taille de police comme vous le souhaitez */
+    }
+}
+
+/* Pour les appareils avec une largeur d'écran de 601px à 992px */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .classe-h5 {
+        font-size: 18px; /* Ajustez la taille de police comme vous le souhaitez */
+    }
+}
+
+/* Pour les appareils avec une largeur d'écran de 993px à 1200px */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .classe-h5 {
+        font-size: 20px; /* Ajustez la taille de police comme vous le souhaitez */
+    }
+}
+
+/* Pour les appareils avec une largeur d'écran supérieure à 1200px */
+@media only screen and (min-width: 1201px) {
+    .classe-h5 {
+        font-size: 22px; /* Ajustez la taille de police comme vous le souhaitez */
+    }
+}
+
+
+

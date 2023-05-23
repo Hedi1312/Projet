@@ -120,5 +120,3 @@
         afficherTousLesArticles();
     });
 </script>
-</body>
-</html>

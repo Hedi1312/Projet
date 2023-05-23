@@ -1,40 +1,46 @@
-#   Creation de la base de donnees nommee : site
+#   Creation de la base de donnees nommee : site_efrei
 
 
-DROP SCHEMA IF EXISTS site ;
-CREATE SCHEMA IF NOT EXISTS site;
+DROP SCHEMA IF EXISTS site_efrei ;
+CREATE SCHEMA IF NOT EXISTS site_efrei;
 
-# set search_path to site;
+# set search_path to site_efrei;
 
 
 # Creation des tables
 
+
 #------------------------------------------------------------
-# Table: Utilisateur
+# Table: acheteurs
 #------------------------------------------------------------
 
 
-CREATE TABLE if not exists site.utilisateur(
-    idUtilisateur int (100) Auto_increment  NOT NULL ,
-    prenom        Varchar (100) NOT NULL ,
+CREATE TABLE if not exists site_efrei.acheteurs(
+    idAcheteurs     int (100) Auto_increment  NOT NULL ,
+    nom             Varchar (100) NOT NULL ,
+    prenom          Varchar (100) NOT NULL ,
+    pseudo          Varchar (100) NOT NULL ,
+    adresse1        Varchar (200) NOT NULL ,
+    adresse2        Varchar (200) ,
+    ville           Varchar (100) NOT NULL ,
+    codepostal      Varchar (5) NOT NULL ,
+    pays            Varchar (100) NOT NULL ,
+    numero          Varchar (20) NOT NULL ,
+    email           Varchar (100) NOT NULL ,
+    mdp             Varchar (100) NOT NULL ,
+    UNIQUE(email),
+    PRIMARY KEY (idAcheteurs)
+);
+#------------------------------------------------------------
+# Table: vendeurs
+#------------------------------------------------------------
+
+
+CREATE TABLE if not exists site_efrei.vendeurs(
+    idVendeur     int (100) Auto_increment  NOT NULL ,
+    pseudo        Varchar (100) NOT NULL ,
+    email         Varchar (100) NOT NULL ,
     nom           Varchar (100) NOT NULL ,
-    age           Smallint NOT NULL ,
-    idLogin       Int NOT NULL,
-    UNIQUE(idLogin),
-    PRIMARY KEY (idUtilisateur )
+    UNIQUE(email),
+    PRIMARY KEY (idVendeur)
 );
-
-#------------------------------------------------------------
-# Table: Identifiants
-#------------------------------------------------------------
-
-
-CREATE TABLE if not exists site.identifiants(
-    idLogin       int (100) Auto_increment  NOT NULL ,
-    login         Varchar (200) NOT NULL ,
-    password      Text NOT NULL ,
-    PRIMARY KEY (idLogin ) ,
-    UNIQUE (login)
-);
-
-ALTER TABLE site.utilisateur ADD CONSTRAINT FK_Utilisateur_idLogin FOREIGN KEY (idLogin) REFERENCES site.identifiants(idLogin)ON UPDATE cascade ON DELETE cascade;

@@ -7,19 +7,28 @@ class ModConnexion{
 
     function __construct(){
 
-        $this->controleur = new ContConnexion();
+        $this->controleur = new ContConnexionVendeur();
 
 
         if (isset($_GET['action'])) {
             $action = $_GET['action'];
         }
         else {
-            $action = "formulaire";
+            $action = "accueil";
         }
 
         switch ($action) {
-            case 'formulaire' :
-                $this->controleur->test_connexion();
+            case 'accueil':
+                $this->controleur->accueil();
+                break;
+            case 'formulaireVendeur' :
+                $this->controleur->form_connexionVendeur();
+                break;
+            case 'formulaireAcheteur' :
+                $this->controleur->form_connexionAcheteur();
+                break;
+            case 'formulaireAdmin' :
+                $this->controleur->form_connexionAdmin();
                 break;
             case 'connexion' :
                 $this->controleur->connexion();
@@ -28,7 +37,7 @@ class ModConnexion{
                 $this->controleur->deconnexion();
                 break;
             default:
-                $this->controleur->test_connexion();
+                $this->controleur->accueil();
                 break;
         }
     }
