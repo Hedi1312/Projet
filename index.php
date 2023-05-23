@@ -16,6 +16,7 @@ switch ($module) {
     case "ModConnexion":
     case "ModInscription":
     case "ModAccueil":
+    case "ModToutparcourir":
         require_once "./modules/$module/$module.php";
         new $module();
         break;

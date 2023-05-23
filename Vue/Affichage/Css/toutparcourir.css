@@ -1,0 +1,75 @@
+#toutparcourir {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section {
+    flex: 1 1 45%;
+    margin-bottom: 25px;
+}
+
+.classe-h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: white; /* Couleur de police blanche */
+}
+
+.classe-h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white; /* Couleur de police blanche */
+}
+
+.classe-h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white; /* Couleur de police blanche */
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.categorie {
+    margin-bottom: 20px;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article {
+    flex: 0 0 calc(33.33% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 20px; /* Coins arrondis */
+}
+
+.sidebar {
+    flex: 1 1 25%; /* Largeur de la side bar */
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    transition: all 0.3s ease; /* Transition animée */
+}
+
+.filtres {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alignement à gauche */
+}
+
+.filtre {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: lightblue;
+    cursor: pointer;
+    text-align: center;
+    width: 100%; /* Largeur à 100% pour occuper toute la largeur de la side bar */
+    border-radius: 20px; /* Coins arrondis */
+}
