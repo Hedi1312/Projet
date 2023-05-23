@@ -67,7 +67,42 @@ p {
 }
 
 
+
 .classe-h5 {
-    color: black; /* Couleur de police blanche */
+    color: black;
+    border: 1px solid;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
 }
+
+/* Pour les appareils avec une largeur d'écran jusqu'à 600px */
+@media only screen and (max-width: 600px) {
+    .classe-h5 {
+        font-size: 16px; /* Ajustez la taille de police comme vous le souhaitez */
+    }
+}
+
+/* Pour les appareils avec une largeur d'écran de 601px à 992px */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .classe-h5 {
+        font-size: 18px; /* Ajustez la taille de police comme vous le souhaitez */
+    }
+}
+
+/* Pour les appareils avec une largeur d'écran de 993px à 1200px */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .classe-h5 {
+        font-size: 20px; /* Ajustez la taille de police comme vous le souhaitez */
+    }
+}
+
+/* Pour les appareils avec une largeur d'écran supérieure à 1200px */
+@media only screen and (min-width: 1201px) {
+    .classe-h5 {
+        font-size: 22px; /* Ajustez la taille de police comme vous le souhaitez */
+    }
+}
+
+
 

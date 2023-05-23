@@ -13,6 +13,7 @@ else {
 Connexion::initConnexion();
 
 switch ($module) {
+    case "ModProduit" :
     case "ModConnexion":
     case "ModInscription":
     case "ModAccueil":
