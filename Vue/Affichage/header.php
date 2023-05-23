@@ -19,10 +19,13 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <?php if(empty($_SESSION['login'])):?>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?module=ModConnexion">Connexionss</a>
+                    <a class="nav-link" href="index.php?module=ModConnexion">Connexion</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?module=ModInscription">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=ModProduit">Produit</a>
                 </li>
             </ul>
             <span class="navbar-text">

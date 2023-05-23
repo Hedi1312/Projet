@@ -11,37 +11,37 @@
     <section id="section-selection" class="section">
         <h2 class="classe-h2">Sélection du jour</h2>
         <!-- Vous pouvez récupérer les articles du jour à partir de la base de données et les afficher ici -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div id="carouselFade" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Vue/Affichage/img/CasqueGpro.jpg" class="d-block w-100" alt="Casque G Pro" style="object-fit: cover; height: 500px;">
+                <div class="carousel-item active text-center">
+                    <img src="Vue/Affichage/img/processeur.png" class="rounded mx-auto d-block" alt="Casque G Pro" style="object-fit: cover; height: 500px;">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="classe-h5">Casque G Pro</h5>
+                        <h5 class="classe-h5">Processeur</h5>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Vue/Affichage/img/Iphone14.jpg" class="d-block w-100" alt="Iphone14" style="object-fit: cover; height: 500px;">
+                <div class="carousel-item text-center">
+                    <img src="Vue/Affichage/img/iphone.png" class="rounded mx-auto d-block" alt="Iphone14" style="object-fit: cover; height: 500px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="classe-h5">Iphone 14 Pro Max</h5>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="Vue/Affichage/img/LogitechG502.jpg" class="d-block w-100" alt="LogitechG502" style="object-fit: cover; height: 500px;">
+                <div class="carousel-item text-center">
+                    <img src="Vue/Affichage/img/ram.png" class="rounded mx-auto d-block" alt="LogitechG502" style="object-fit: cover; height: 500px;">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="classe-h5">Logitech G502</h5>
+                        <h5 class="classe-h5">RAM</h5>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -67,7 +67,9 @@
 
     <section id="google_maps" class="section">
         <h2 class="classe-h2">Localisation</h2>
+        <a href="https://www.google.com/maps/place/Efrei/@48.7887182,2.3615626,17z/data=!4m10!1m2!2m1!1sefrei+villejuif!3m6!1s0x47e673e24e04a9c3:0xc55cb3e676f95321!8m2!3d48.7887182!4d2.3637513!15sCg9lZnJlaSB2aWxsZWp1aWaSAQ9wcml2YXRlX2NvbGxlZ2XgAQA!16zL20vMDVtcHk0" target="_blank">
         <img src="Vue/Affichage/img/efrei_marketplace_googlemaps.png" class="rounded mx-auto d-block" alt="google maps" width="300" height="200">
+        </a>
     </section>
 
 
