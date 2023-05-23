@@ -1,13 +1,13 @@
 <?php
 
-require_once "./modules/ModInscriptionVendeur/cont_inscriptionVendeur.php";
+require_once "./modules/ModInscription/cont_inscription.php";
 
-class ModInscriptionVendeur {
+class ModInscription {
     private $controleur;
 
     function __construct () {
     
-        $this->controleur=new ContInscriptionVendeur();
+        $this->controleur=new ContInscription();
 
         if(isset($_GET['action'])) {
             $action=$_GET['action'];

@@ -1,7 +1,7 @@
 <?php
 
 require_once "./Vue/vue_connexionVendeurVendeur.php";
-require_once "./modules/ModConnexionVendeur/modele_connexionVendeurVendeur.php";
+require_once "./modules/ModConnexion/modele_connexionVendeurVendeur.php";
 
 class ContConnexionVendeur {
     private $modele;
@@ -31,12 +31,12 @@ class ContConnexionVendeur {
                 exit();
             }
             else {
-                $this->vue->alerte_message("L'adresse mail ou le pseudo saisie est incorrecte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexionVendeur' class='alert-link'>connecter</a>","danger","index.php?module=ModConnexionVendeur");
+                $this->vue->alerte_message("L'adresse mail ou le pseudo saisie est incorrecte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter</a>","danger","index.php?module=ModConnexion");
             }
         }
 
         else {
-            $this->vue->alerte_message("L'adresse mail $login n'appartient à aucun compte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexionVendeur' class='alert-link'>connecter </a>ou vous <a href='index.php?module=ModInscriptionVendeur' class='alert-link'>inscrire</a>","danger","index.php?module=ModInscriptionVendeur");
+            $this->vue->alerte_message("L'adresse mail $login n'appartient à aucun compte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter </a>ou vous <a href='index.php?module=ModInscription' class='alert-link'>inscrire</a>","danger","index.php?module=ModInscription");
         }
 
     }

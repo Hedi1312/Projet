@@ -5,7 +5,7 @@
                 <img src="Vue/Affichage/img/pageVendeur.png" class="img-fluid" alt="Sample image" id="log_img">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                <form action="index.php?module=ModInscriptionVendeur&action=inscription" method="POST">
+                <form action="index.php?module=ModInscription&action=inscription" method="POST">
 
                     <!-- Pseudo -->
                     <div class="form-outline mb-3">
@@ -28,7 +28,7 @@
 
                     <div class="text-center text-lg-start mt-4 pt-2">
                         <button type="submit" class="btn btn-primary btn-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="padding-left: 2.5rem; padding-right: 2.5rem;" value="Inscription">Inscription</button>
-                        <p class="small fw-bold mt-2 pt-1 mb-0"style="color: black;">Vous avez déjà un compte ? <a href="index.php?module=ModConnexionVendeur" class="link-danger">Connexion</a></p>
+                        <p class="small fw-bold mt-2 pt-1 mb-0"style="color: black;">Vous avez déjà un compte ? <a href="index.php?module=ModConnexion" class="link-danger">Connexion</a></p>
                     </div>
                 </form>
             </div>

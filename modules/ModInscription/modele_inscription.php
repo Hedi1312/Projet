@@ -2,7 +2,7 @@
 
 require_once "./Connexion.php";
 
-class ModeleInscriptionVendeur extends Connexion {
+class ModeleInscription extends Connexion {
     
     public function inscription($pseudo,$login,$nom) {
 

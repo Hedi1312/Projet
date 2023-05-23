@@ -9,7 +9,7 @@ class Connexion {
     public static function initConnexion() {
         try {
 
-            $dns="mysql:host=localhost:3306;dbname=site_efrei";
+            $dns="mysql:host=localhost:3307;dbname=site_efrei";
             $user="root";
             self::$bdd = new PDO($dns,$user);
 

@@ -1,7 +1,7 @@
 <?php
 
 require_once "./Vue/Vue.php";
-class VueInscriptionVendeur{
+class VueInscription{
  
     function form_inscription() {
         Vue::render("Affichage/inscriptionVendeur.php",["titre"=>"Inscription Vendeur"]);

@@ -19,10 +19,10 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <?php if(empty($_SESSION['login'])):?>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?module=ModConnexionVendeur">Vendeur</a>
+                    <a class="nav-link" href="index.php?module=ModConnexion">Connexionss</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?module=ModConnexionAcheteur">Acheteur</a>
+                    <a class="nav-link" href="index.php?module=ModInscription">Inscription</a>
                 </li>
             </ul>
             <span class="navbar-text">
@@ -31,7 +31,7 @@
             <?php else: ?>
                 </ul>
                 <span class="navbar-text">
-                                <a class="nav-link" href="index.php?module=ModConnexionVendeur&action=deconnexion">Deconnexion</a>
+                                <a class="nav-link" href="index.php?module=ModConnexion&action=deconnexion">Deconnexion</a>
                         </span>
             <?php endif; ?>
         </div>

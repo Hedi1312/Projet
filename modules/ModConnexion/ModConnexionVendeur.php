@@ -1,6 +1,6 @@
 <?php
 
-require_once "./modules/ModConnexionVendeur/cont_connexionVendeurVendeur.php";
+require_once "./modules/ModConnexion/cont_connexionVendeurVendeur.php";
 
 class ModConnexionVendeur{
     private $controleur;
