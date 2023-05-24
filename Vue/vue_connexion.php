@@ -1,7 +1,7 @@
 <?php
 
 require_once "./Vue/Vue.php";
-class VueConnexionVendeur {
+class VueConnexion {
 
     function accueil() {
         Vue::render("Affichage/connexionAccueil.php",["titre"=>"Connexion"]);

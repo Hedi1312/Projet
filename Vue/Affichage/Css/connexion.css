@@ -2,8 +2,12 @@
     background-color: white;
     border-radius: 20px;
     margin-top: 5%;
-    padding: 20px;
+    padding: 30px;
     width: 100%;
+}
+
+.form_connexion_img{
+    border-radius: 10px;
 }
 
 #h1Vendeur{

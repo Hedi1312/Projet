@@ -19,24 +19,59 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <?php if(empty($_SESSION['login'])):?>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?module=ModToutparcourir">Tout parcourir</a>
                 </li>
+
+
+                <?php if(!empty($_SESSION['admin'])):?>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ajouter article</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gestion vendeurs</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-danger" disabled>Admin</button>
+                </li>
+
+                <?php elseif(!empty($_SESSION['vendeur'])):?>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ajouter article</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-warning" disabled>Vendeur</button>
+                </li>
+
+                <?php elseif(!empty($_SESSION['acheteur'])):?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=ModToutparcourir">Notifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=ModToutparcourir">Panier</a>
+                </li>
+                <?php endif; ?>
+                <?php if(!empty($_SESSION)):?>
+
             </ul>
             <span class="navbar-text">
-                    <a class="nav-link" id="lienInscription" href="index.php?module=ModInscription">Inscription</a>
+                <a class="nav-link lienNav" href="index.php?module=ModConnexion&action=deconnexion">Deconnexion</a>
             </span>
             <span class="navbar-text">
-                    <a class="nav-link" href="index.php?module=ModConnexion">Mon compte</a>
+                <a class="nav-link" href="index.php?module=ModCompte">Mon compte</a>
             </span>
-            <?php else: ?>
-                </ul>
-                <span class="navbar-text">
-                                <a class="nav-link" href="index.php?module=ModConnexion&action=deconnexion">Deconnexion</a>
-                        </span>
+                <?php else: ?>
 
-            <?php endif; ?>
+            </ul>
+            <span class="navbar-text">
+                <a class="nav-link lienNav" href="index.php?module=ModInscription">Inscription</a>
+            </span>
+            <span class="navbar-text">
+                <a class="nav-link" href="index.php?module=ModConnexion">Mon compte</a>
+            </span>
+                <?php endif; ?>
+
+
         </div>
     </div>
 </nav>

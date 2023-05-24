@@ -7,7 +7,7 @@ class ModConnexion{
 
     function __construct(){
 
-        $this->controleur = new ContConnexionVendeur();
+        $this->controleur = new ContConnexion();
 
 
         if (isset($_GET['action'])) {
@@ -30,8 +30,14 @@ class ModConnexion{
             case 'formulaireAdmin' :
                 $this->controleur->form_connexionAdmin();
                 break;
-            case 'connexion' :
-                $this->controleur->connexion();
+            case 'connexionAcheteur' :
+                $this->controleur->connexionAcheteur();
+                break;
+            case 'connexionAdmin' :
+                $this->controleur->connexionAdmin();
+                break;
+            case 'connexionVendeur' :
+                $this->controleur->connexionVendeur();
                 break;
             case 'deconnexion':
                 $this->controleur->deconnexion();

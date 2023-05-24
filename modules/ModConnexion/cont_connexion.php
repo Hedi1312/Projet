@@ -3,13 +3,13 @@
 require_once "./Vue/vue_connexion.php";
 require_once "./modules/ModConnexion/modele_connexion.php";
 
-class ContConnexionVendeur {
+class ContConnexion {
     private $modele;
     private $vue;
 
     function __construct () {
-        $this->vue = new VueConnexionVendeur();
-        $this->modele = new ModeleConnexionVendeur();
+        $this->vue = new VueConnexion();
+        $this->modele = new ModeleConnexion();
     }
 
     function accueil () {
@@ -28,16 +28,16 @@ class ContConnexionVendeur {
         $this->vue->form_connexionAdmin();
     }
 
-    function connexion () {
 
-        $login=$_POST['login'];
-        $pseudo=$_POST['pseudo'];
-        $user=$this->modele->connexion($login);
+    function connexionAcheteur() {
+        $email=$_POST['email'];
+        $mdp=$_POST['mdp'];
+        $user=$this->modele->connexionAcheteur($email);
         if(!empty($user)) {
-            $count=password_verify($pseudo,$user['pseudo']);
+            $count=password_verify($mdp,$user['mdp']);
 
             if($count) {
-                $_SESSION['login']=$login;
+                $_SESSION['acheteur']=$email;
                 header('Location: index.php?module=ModAccueil');
 
                 exit();
@@ -48,13 +48,71 @@ class ContConnexionVendeur {
         }
 
         else {
-            $this->vue->alerte_message("L'adresse mail $login n'appartient à aucun compte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter </a>ou vous <a href='index.php?module=ModInscription' class='alert-link'>inscrire</a>","danger","index.php?module=ModInscription");
+            $this->vue->alerte_message("L'adresse mail $email n'appartient à aucun compte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter </a>ou vous <a href='index.php?module=ModInscription' class='alert-link'>inscrire</a>","danger","index.php?module=ModInscription");
+        }
+    }
+
+    function connexionVendeur() {
+        $pseudo=$_POST['pseudo'];
+        $email=$_POST['email'];
+        $user=$this->modele->connexionVendeur($email);
+
+        if(!empty($user)) {
+            $mdp=password_hash($pseudo,PASSWORD_DEFAULT);
+            $count=password_verify($user['pseudo'],$mdp);
+
+            if($count) {
+                $_SESSION['vendeur']=$email;
+                header('Location: index.php?module=ModAccueil');
+
+                exit();
+            }
+            else {
+                $this->vue->alerte_message("L'adresse mail ou le pseudo saisie est incorrecte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter</a>","danger","index.php?module=ModConnexion");
+            }
         }
 
+        else {
+            $this->vue->alerte_message("L'adresse mail $email n'appartient à aucun compte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter </a>ou vous <a href='index.php?module=ModInscription' class='alert-link'>inscrire</a>","danger","index.php?module=ModInscription");
+        }
+    }
+
+    function connexionAdmin() {
+        $pseudo=$_POST['pseudo'];
+        $email=$_POST['email'];
+        $mdp=$_POST['mdp'];
+        $user=$this->modele->connexionAdmin($pseudo);
+        if(!empty($user)) {
+            $count=password_verify($email,$user['email']);
+            $count2=password_verify($mdp,$user['mdp']);
+
+            if($count && $count2) {
+                $_SESSION['admin']=$email;
+                header('Location: index.php?module=ModAccueil');
+
+                exit();
+            }
+            else {
+                $this->vue->alerte_message("L'adresse mail ou le pseudo saisie est incorrecte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter</a>","danger","index.php?module=ModConnexion");
+            }
+        }
+
+        else {
+            $this->vue->alerte_message("Le pseudo $pseudo n'appartient à aucun compte</br>Veuillez réessayer de vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter </a>ou vous <a href='index.php?module=ModInscription' class='alert-link'>inscrire</a>","danger","index.php?module=ModInscription");
+        }
     }
 
     function deconnexion() {
-        unset($_SESSION['login']);
+        if (!empty($_SESSION['acheteur'])) {
+            unset($_SESSION['acheteur']);
+        }
+        elseif (!empty($_SESSION['admin'])) {
+            unset($_SESSION['admin']);
+        }
+        elseif (!empty($_SESSION['vendeur'])){
+            unset($_SESSION['vendeur']);
+        }
+
         $this->vue->accueil();
     }
 }
