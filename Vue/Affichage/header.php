@@ -59,7 +59,7 @@
             <span class="navbar-text">
                 <a class="nav-link lienNav" href="index.php?module=ModConnexion&action=deconnexion">Deconnexion</a>
             </span>
-            <?php elseif(empty($_SESSION['admin'])):?>
+
                 <span class="navbar-text">
                 <a class="nav-link" href="index.php?module=ModCompte">Mon compte</a>
             </span>
