@@ -18,6 +18,7 @@ switch ($module) {
     case "ModInscription":
     case "ModAccueil":
     case "ModCompte":
+    case 'ModGestionVendeurs' :
     case "ModToutparcourir":
         require_once "./modules/$module/$module.php";
         new $module();

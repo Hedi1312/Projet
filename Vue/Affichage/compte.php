@@ -4,7 +4,7 @@
             <div class="profile-header-content">
                 <?php if(!empty($_SESSION['vendeur'])):?>
                 <div class="profile-header-img mb-4">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png">
+                    <img src=<?= $data['img']?>>
                 </div>
                 <?php endif; ?>
                 <div class="profile-header-info">
@@ -15,7 +15,9 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <button class="nav-link active" id="nav-info-tab" data-bs-toggle="tab" data-bs-target="#nav-info" type="button" role="tab" aria-controls="nav-info" aria-selected="true">Mes informations</button>
+                    <?php if(!empty($_SESSION['acheteur'])):?>
                     <button class="nav-link" id="nav-cartes-tab" data-bs-toggle="tab" data-bs-target="#nav-cartes" type="button" role="tab" aria-controls="nav-cartes" aria-selected="false">Mes cartes</button>
+                    <?php endif; ?>
                 </div>
             </nav>
 
@@ -113,6 +115,15 @@
                                     <p class="mb-0"><?=  $data['email']?></p>
                                 </div>
                             </div>
+                            <?php elseif(!empty($_SESSION['admin'])):?>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Pseudo :</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="mb-0"><?= $data['pseudo']?></p>
+                                    </div>
+                                </div>
                             <?php elseif(!empty($_SESSION['vendeur'])):?>
                             <div class="row">
                                 <div class="col-sm-3">
@@ -141,7 +152,7 @@
                                 </div>
                             </div>
                             <?php endif; ?>
-
+                            <?php if(empty($_SESSION['admin'])):?>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="float:right;">
                                 Supprimer mon compte
@@ -162,6 +173,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

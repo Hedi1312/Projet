@@ -35,15 +35,16 @@ class ModCompte{
             case 'supprimer':
                 if (!empty($_SESSION['acheteur'])){
                     $email = $_SESSION['acheteur'];
+                    $user='acheteur';
                 }
-                elseif (!empty($_SESSION['admin'])){
-                    $email = $_SESSION['admin'];
-                }
+
                 elseif (!empty($_SESSION['vendeur'])){
                     $email = $_SESSION['vendeur'];
+                    $user='vendeur';
                 }
-                unset($_SESSION['vendeur']);
+
                 $this->controleur->supprimerProfil($email);
+                unset($_SESSION["$user"]);
                 break;
             default:
                 header('Location: index.php?module=ModAccueil');

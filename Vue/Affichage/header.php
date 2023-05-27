@@ -29,7 +29,7 @@
                     <a class="nav-link" href="#">Ajouter article</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Gestion vendeurs</a>
+                    <a class="nav-link" href="index.php?module=ModGestionVendeurs">Gestion vendeurs</a>
                 </li>
                 <li class="nav-item">
                     <button type="button" class="btn btn-danger" disabled>Admin</button>
@@ -57,6 +57,7 @@
             <span class="navbar-text">
                 <a class="nav-link lienNav" href="index.php?module=ModConnexion&action=deconnexion">Deconnexion</a>
             </span>
+            <?php elseif(empty($_SESSION['admin'])):?>
             <span class="navbar-text">
                 <a class="nav-link" href="index.php?module=ModCompte">Mon compte</a>
             </span>

@@ -6,7 +6,7 @@
 }
 .profile-header .profile-header-content {
     color: #fff;
-    padding: 1.25rem;
+    margin-top: 20px;
 }
 
 .profile-header-img img {
@@ -15,8 +15,7 @@
 
 .profile-header-img {
     float: left;
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 20%;
     overflow: hidden;
     z-index: 10;
     margin: 0 1.25rem -1.25rem 0;
