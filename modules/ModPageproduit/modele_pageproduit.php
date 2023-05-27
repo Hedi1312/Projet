@@ -1,8 +1,8 @@
 <?php
 
-require_once "./toutparcourir.php";
+require_once "./pageproduit.php";
 
-class ModeleToutparcourir extends Toutparcourir {
+class ModelePageproduit extends Pageproduit {
 
     public function inscription($prenom,$nom,$age,$login,$password) {
 

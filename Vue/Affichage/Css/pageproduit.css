@@ -1,0 +1,81 @@
+/* Carousel */
+.slick-slider {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slick-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.produit-description {
+    font-size: 16px;
+}
+
+/* Prix */
+.produit-prix {
+    font-size: 24px;
+    color: #FF9900; /* Couleur orange */
+}
+
+/* Avis */
+.avis-client {
+    margin-bottom: 20px;
+}
+
+.avis-client-note {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF9900; /* Couleur orange */
+}
+
+.avis-client-commentaire {
+    font-size: 14px;
+}
+
+.voir-tous-avis {
+    color: #0000FF; /* Couleur bleue */
+    text-decoration: none;
+}
+
+.voir-tous-avis:hover {
+    text-decoration: underline;
+}
+/* Titre */
+.produit-titre {
+    font-size: 24px;
+    color: #81ff00; /* Couleur vert */
+}
+
+/* Description */
+.produit-description {
+    color: #000; /* Couleur noire */
+}
+
+/* Prix */
+.produit-prix {
+    color: #FF9900; /* Couleur orange */
+}
+
+/* Avis */
+.avis-client-note {
+    color: #FF9900; /* Couleur orange */
+}
+
+.voir-tous-avis {
+    color: #0000FF; /* Couleur bleue */
+}

@@ -24,7 +24,7 @@
                     <h3 class="classe-h3">Articles haut de gamme</h3>
                     <div class="articles">
                         <div class="article" data-categorie="haut-de-gamme" data-achat="immédiat">
-                            <img src="Vue/Affichage/img/iphone.png" class="d-block w-100" alt="iPhone">
+                            <img src="Vue/Affichage/img/articles/iphone/iphone_1.png" class="d-block w-100" alt="iPhone">
                             <p>Téléphone - iPhone 14 Pro Max - 128 Go - Violet Intense</p>
                         </div>
                         <div class="article" data-categorie="haut-de-gamme" data-achat="transaction">

@@ -5,6 +5,8 @@
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="Vue/Affichage/img/favicon-16x16.png"/>
     <link rel="stylesheet" href="./Vue/Affichage/Css/Style.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title><?= $data['titre']?></title>
 </head>
@@ -21,7 +23,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <?php if(empty($_SESSION['login'])):?>
                 <li class="nav-item">
-
+                    <a class="nav-link" id="lienToutparcourir" href="index.php?module=ModToutparcourir">Tout Parcourir</a>
                 </li>
             </ul>
             <span class="navbar-text">
