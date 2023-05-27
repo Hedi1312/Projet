@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: white;
 }
 #contact-section {
     margin-top: auto; /* Ajoute une marge automatique en haut de la section */
@@ -45,7 +46,7 @@
     color: white; /* Couleur de police blanche */
 }
 
-p {
+{
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;

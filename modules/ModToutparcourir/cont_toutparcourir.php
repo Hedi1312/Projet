@@ -4,8 +4,7 @@ cont_toutparcourir.php
 
 require_once "Vue/vue_toutparcourir.php";
 
-class ContToutparcourir
-{
+class ContToutparcourir{
     private $vue;
 
     function __construct()

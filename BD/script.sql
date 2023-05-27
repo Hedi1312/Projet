@@ -9,6 +9,18 @@ CREATE SCHEMA IF NOT EXISTS site_efrei;
 
 # Creation des tables
 
+#------------------------------------------------------------
+# Table: admins
+#------------------------------------------------------------
+
+CREATE TABLE site_efrei.admins(
+      idAdmin       int (100) Auto_increment  NOT NULL ,
+      pseudo        Varchar (100) NOT NULL ,
+      email         Varchar (100) NOT NULL ,
+      mdp           Varchar (100) NOT NULL ,
+      UNIQUE(email),
+      PRIMARY KEY (idAdmin)
+)ENGINE=InnoDB;
 
 #------------------------------------------------------------
 # Table: acheteurs
@@ -30,7 +42,7 @@ CREATE TABLE if not exists site_efrei.acheteurs(
     mdp             Varchar (100) NOT NULL ,
     UNIQUE(email),
     PRIMARY KEY (idAcheteurs)
-);
+)ENGINE=InnoDB;
 #------------------------------------------------------------
 # Table: vendeurs
 #------------------------------------------------------------
@@ -43,4 +55,4 @@ CREATE TABLE if not exists site_efrei.vendeurs(
     nom           Varchar (100) NOT NULL ,
     UNIQUE(email),
     PRIMARY KEY (idVendeur)
-);
+)ENGINE=InnoDB;

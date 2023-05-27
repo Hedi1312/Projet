@@ -1,22 +1,33 @@
-DELETE FROM site_efrei.vendeur ;
+DELETE FROM site_efrei.vendeurs;
+DELETE FROM site_efrei.acheteurs;
+DELETE FROM site_efrei.admins;
 
 
--- Mot de passe : Pseudo+1234
+#------------------------------------------------------------
+#------------- Admin
+#------------------------------------------------------------
 
-INSERT INTO site_efrei.identifiants(`login`, `password`) VALUES ('hedi.okba@efrei.net','$2y$10$XfCW98.cnltHvigdIbokuudnp3D2MiuqiwFxntFtEBdiKq6VnHEn6');
-INSERT INTO site_efrei.utilisateur (`typeCompte`, `pseudo`, `idLogin`) VALUES ( 'administrateur', 'Pepito', LAST_INSERT_ID() );
+-- Admin : Admin - admin.admin@efrei.net - Admin2023
+INSERT INTO site_efrei.admins(`pseudo`,`email`,`mdp`) VALUES ('Admin','$2y$10$m5OhimJVIzxWbmQ.kMCQX.L4qsIxAJjZC33ndUS.sCa6VsVOkl7XG','$2y$10$z/lo9gQl9w0VZP7BypvpFOw//ePSXcZEduRWM9Fx3UWaQmAElLWFK');
 
-INSERT INTO site_efrei.identifiants(`login`, `password`) VALUES ('hassane.mohamad@efrei.net','$2y$10$xsSSlQx21CY0sUs9SkKgDeKuhjYIGUWYxSiRIWWLCO.ti4SoDc4sW');
-INSERT INTO site_efrei.utilisateur (`typeCompte`, `pseudo`, `idLogin`) VALUES ( 'acheteur', 'Hassane', LAST_INSERT_ID() );
+#------------------------------------------------------------
+#------------- Acheteurs
+#------------------------------------------------------------
 
-INSERT INTO site_efrei.identifiants(`login`, `password`) VALUES ('ilman.al@efrei.net','$2y$10$L5fNRZSv.X05LJfnLOok9ukZ0HrFngl74HLuonoJAUip06C4w9qmy');
-INSERT INTO site_efrei.utilisateur (`typeCompte`, `pseudo`, `idLogin`) VALUES ( 'acheteur', 'Ilman', LAST_INSERT_ID() );
+-- MDP -> Hedi9999
+INSERT INTO site_efrei.acheteurs(`nom`, `prenom`, `pseudo`, `adresse1`, `ville`, `codepostal`, `pays`, `numero`, `email`, `mdp`) VALUES ('OKBA','Hedi','Pepito','99 Rue de Bobigny','Bobigny','93000','France','0700000000','hedi.okba@efrei.net','$2y$10$j9XILpUu1mAifucUMzp2nuncwnYKGgYFQDr03n4ETWydHbU1mpegC');
 
-INSERT INTO site_efrei.identifiants(`login`, `password`) VALUES ('amir.thabet@efrei.net','$2y$10$bsaCJHwLimnZOIP4FV0OZ.9D52gY67WXJvChoOa.rwjhcMHor/Bja');
-INSERT INTO site_efrei.utilisateur (`typeCompte`, `pseudo`, `idLogin`) VALUES ( 'vendeur', 'Amir', LAST_INSERT_ID() );
-
-
-
+-- MDP -> Ilman9999
+INSERT INTO site_efrei.acheteurs(`nom`, `prenom`, `pseudo`, `adresse1`,`adresse2`, `ville`, `codepostal`, `pays`, `numero`, `email`, `mdp`) VALUES ('MOHAMMAD AL MOMIN','Ilman','Optik','10 Avenue du Bourget','Etage 3 porte 2','Le Bourget','93350','France','0799999999','ilman.mohammad-al-momin@efrei.net','$2y$10$fX6BcUox5YQJwKsvXVFJke8eOzpm1IQF2VeAO4yJAuAoP.Zf0QbDS');
 
 
+#------------------------------------------------------------
+#------------- Vendeurs
+#------------------------------------------------------------
 
+-- Pseudo -> Amirovinho
+INSERT INTO `vendeurs`(`pseudo`, `email`, `nom`) VALUES ('Amirovinho','amir.thabet@efrei.net','Amir');
+
+
+-- Pseudo -> Husna
+INSERT INTO `vendeurs`(`pseudo`, `email`, `nom`) VALUES ('Husna','hassane.mohamad@efrei.net','Hassane');

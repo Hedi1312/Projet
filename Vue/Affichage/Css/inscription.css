@@ -1,4 +1,10 @@
 #ins_img{
     border-radius: 10px;
+    margin-bottom: 100px;
+}
 
+#h2inscription{
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 150px;
 }
