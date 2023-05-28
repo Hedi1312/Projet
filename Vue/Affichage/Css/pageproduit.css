@@ -11,7 +11,6 @@
     height: auto;
 }
 
-/* Sections */
 .section {
     margin-bottom: 30px;
 }
@@ -21,18 +20,16 @@
     margin-bottom: 10px;
 }
 
-/* Description */
 .produit-description {
     font-size: 16px;
 }
 
-/* Prix */
 .produit-prix {
     font-size: 24px;
-    color: #FF9900; /* Couleur orange */
+    color: #FF9900; / Couleur orange /
 }
 
-/* Avis */
+
 .avis-client {
     margin-bottom: 20px;
 }
@@ -40,7 +37,7 @@
 .avis-client-note {
     font-size: 18px;
     font-weight: bold;
-    color: #FF9900; /* Couleur orange */
+    color: #FF9900; / Couleur orange /
 }
 
 .avis-client-commentaire {
@@ -48,34 +45,48 @@
 }
 
 .voir-tous-avis {
-    color: #0000FF; /* Couleur bleue */
+    color: #0000FF; / Couleur bleue /
     text-decoration: none;
 }
 
 .voir-tous-avis:hover {
     text-decoration: underline;
 }
-/* Titre */
+
 .produit-titre {
     font-size: 24px;
-    color: #81ff00; /* Couleur vert */
+    color: #81ff00; / Couleur vert /
 }
 
-/* Description */
 .produit-description {
-    color: #000; /* Couleur noire */
+    color: #000; / Couleur noire /
 }
 
-/* Prix */
+
 .produit-prix {
-    color: #FF9900; /* Couleur orange */
+    color: #FF9900; / Couleur orange /
 }
 
-/* Avis */
 .avis-client-note {
-    color: #FF9900; /* Couleur orange */
+    color: #FF9900; / Couleur orange /
 }
 
+.avis-client-pseudo {
+    font-size: 14px;
+    color: #FF0000; / Couleur rouge /
+}
 .voir-tous-avis {
-    color: #0000FF; /* Couleur bleue */
+    color: #0000FF; / Couleur bleue /
+}
+
+.logo-postal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; / Ajustez la hauteur selon vos besoins */
+}
+
+.logo-postal img {
+    max-height: 300%;
+    max-width: 300%;
 }

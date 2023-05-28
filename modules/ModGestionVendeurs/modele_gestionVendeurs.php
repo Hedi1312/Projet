@@ -23,7 +23,11 @@ class ModeleGestionVendeurs extends Connexion {
     }
 
     public function supprimerVendeur($idVendeur){
-        $requete= self::$bdd->prepare("DELETE FROM vendeurs where idVendeur=:idVendeur;");
+        $requete= self::$bdd->prepare("DELETE FROM articles where idVendeur= :idVendeur;");
+        $requete->bindParam('idVendeur',$idVendeur);
+        $requete->execute();
+
+        $requete= self::$bdd->prepare("DELETE FROM vendeurs where idVendeur= :idVendeur;");
         $requete->bindParam('idVendeur',$idVendeur);
         $requete->execute();
     }

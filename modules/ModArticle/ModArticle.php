@@ -29,6 +29,9 @@ class ModArticle{
             case 'supprimer':
                 $this->controleur->supprimer();
                 break;
+            case 'consulter':
+                $this->controleur->afficherArticle();
+                break;
 
             default:
                 header('Location: index.php?module=ModArticle');

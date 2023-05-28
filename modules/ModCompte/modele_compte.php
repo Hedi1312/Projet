@@ -23,7 +23,6 @@ class ModeleCompte extends Connexion {
         $requete->bindParam('email',$email);
         $requete->execute();
         return $requete->fetch();
-
     }
 
     function supprimerLeProfil($email){

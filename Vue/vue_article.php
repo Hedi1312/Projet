@@ -14,6 +14,11 @@ class VueArticle{
         Vue::render("Affichage/article_ajouter.php",["titre"=>"Ajouter article"]);
     }
 
+    function pageProduit($data){
+        $data["titre"] = "Article";
+        Vue::render("Affichage/article_page.php",$data);
+    }
+
     function alerte_message($message,$alerte,$url) {
         Vue::alerte_message($message,$alerte,$url);
     }

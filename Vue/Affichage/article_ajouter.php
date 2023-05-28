@@ -16,7 +16,7 @@
 
                     <!-- Nom input -->
                     <div class="mb-3">
-                        <input type="text" id="form3Example2" class="form-control form-control-lg" placeholder="Nom produit" name="nom" required/>
+                        <input type="text" id="form3Example2" class="form-control form-control-lg" placeholder="Nom article" name="nom" required/>
                         <label for="form3Example2"></label>
                     </div>
 
@@ -54,9 +54,9 @@
                     <div class="mb-3">
                         <select class="form-select" name="categorie" aria-label="Default select example">
                             <option selected>Categorie</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="Rare">Articles rares</option>
+                            <option value="Haut de gamme">Articles haut de gamme</option>
+                            <option value="Reguliers">Articles reguliers</option>
                         </select>
                     </div>
 

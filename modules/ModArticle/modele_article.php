@@ -5,8 +5,6 @@ require_once "./Connexion.php";
 class ModeleArticle extends Connexion {
 
 
-
-
     public function getListeArticles(){
         $requete= self::$bdd->prepare("SELECT * from articles where idVendeur IN (SELECT idVendeur from vendeurs where email = :email);");
         $requete->bindParam('email',$_SESSION['vendeur']);
@@ -15,7 +13,7 @@ class ModeleArticle extends Connexion {
     }
 
     public function ajoutArticle($numeroIdentification, $nom, $description, string $destination1, string $destination2, string $destination3, $video, $categorie, $prix){
-        $requete= self::$bdd->prepare("INSERT INTO articles (`numeroIdentification`, `nomProduit`, `description`, `photo1`, `photo2`, `photo3`, `video`, `categorie`, `prix`, `idVendeur`) VALUES ( :numeroIdentification, :nom, :description, :photo1,:photo2,:photo3,:video,:categorie,:prix,(SELECT idVendeur from vendeurs where email = :email));");
+        $requete= self::$bdd->prepare("INSERT INTO articles (`numeroIdentification`, `nomArticle`, `description`, `photo1`, `photo2`, `photo3`, `video`, `categorie`, `prix`, `idVendeur`) VALUES ( :numeroIdentification, :nom, :description, :photo1,:photo2,:photo3,:video,:categorie,:prix,(SELECT idVendeur from vendeurs where email = :email));");
         $requete->bindParam('numeroIdentification',$numeroIdentification);
         $requete->bindParam('nom',$nom);
         $requete->bindParam('description',$description);
@@ -34,6 +32,13 @@ class ModeleArticle extends Connexion {
         $requete= self::$bdd->prepare("DELETE FROM articles where idArticle=:idArticle;");
         $requete->bindParam('idArticle',$idArticle);
         $requete->execute();
+    }
+
+    public function getInfoArticle($idArticle){
+        $requete= self::$bdd->prepare("SELECT * from articles where idArticle = :idArticle;");
+        $requete->bindParam('idArticle',$idArticle);
+        $requete->execute();
+        return $requete->fetch();
     }
 
 

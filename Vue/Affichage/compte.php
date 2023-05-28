@@ -4,7 +4,7 @@
             <div class="profile-header-content">
                 <?php if(!empty($_SESSION['vendeur'])):?>
                     <div class="profile-header-img mb-4">
-                        <img src=<?= $data['img']?>>
+                        <img src="<?= $data['img']?>">
                     </div>
                     <div class="profile-header-info">
                         <h4 class="m-t-sm"><?= $data['pseudo_v'] ?></h4>
@@ -151,7 +151,7 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="mb-0">Administrateur :</p>
+                                        <p class="mb-0">Createur du compte :</p>
                                     </div>
                                     <div class="col-sm-9">
                                         <p class="mb-0"><?=  $data['pseudo_a']?></p>

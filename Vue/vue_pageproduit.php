@@ -1,9 +1,11 @@
 <?php
 require_once "./Vue/Vue.php";
 
-class VuePageproduit{
+class VuePageProduit{
 
-    function pagePageproduit(){
-        Vue::render("Affichage/pageproduit.php",["titre"=>"Page Produit"]);
+    function pageProduit($infosArticles){
+        $data["titre"] = $infosArticles["nomProduit"];
+        $data["infosArticles"] = $infosArticles;
+        Vue::render("Affichage/page_article.php",$data);
     }
 }
