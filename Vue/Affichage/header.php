@@ -21,7 +21,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <?php if(empty($_SESSION['login'])):?>
                 <li class="nav-item">
-
+                    <a class="nav-link" href="index.php?module=ModToutparcourir">Tout Parcourir</a>
                 </li>
             </ul>
             <span class="navbar-text">

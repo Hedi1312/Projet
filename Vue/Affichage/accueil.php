@@ -1,7 +1,6 @@
 <div id="accueil">
     <section id="section-bienvenue" class="section">
         <<h1 class="classe-h1">Bienvenue sur Efrei MarketPlace</h1>
-
         <p>Efrei MarketPlace est une plateforme en ligne spécialisée dans la vente aux enchères de produits informatiques. Nous proposons une large gamme de produits tels que des ordinateurs portables, des composants informatiques, des périphériques, des smartphones, des tablettes et bien plus encore.</p>
         <p>Notre plateforme offre une expérience d'achat unique, permettant aux utilisateurs de participer à des enchères pour obtenir les produits qu'ils désirent. Les enchères offrent une opportunité excitante de remporter des produits à des prix avantageux. Les utilisateurs peuvent placer des offres sur les produits qui les intéressent et suivre l'évolution des enchères en temps réel.</p>
         <p>Nous nous efforçons de garantir une expérience de vente aux enchères sécurisée, transparente et équitable pour tous les utilisateurs. Notre équipe est dédiée à fournir un excellent service client et à s'assurer que chaque transaction se déroule sans problème.</p>
