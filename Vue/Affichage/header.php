@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" sizes="16x16" href="Vue/Affichage/img/favicon-16x16.png"/>
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="Vue/Affichage/img/autres/favicon-16x16.png"/>
     <link rel="stylesheet" href="./Vue/Affichage/Css/Style.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -26,45 +26,47 @@
                 </li>
 
 
-                <?php if(!empty($_SESSION['admin'])):?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ajouter article</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?module=ModGestionVendeurs">Gestion vendeurs</a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-danger" disabled>Admin</button>
-                    </li>
+            <?php if(!empty($_SESSION['admin'])):?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=ModArticle">Ajouter article</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=ModGestionVendeurs">Gestion vendeurs</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-danger" disabled>Admin</button>
+                </li>
 
-                <?php elseif(!empty($_SESSION['vendeur'])):?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ajouter article</a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-warning" disabled>Vendeur</button>
-                    </li>
+            <?php elseif(!empty($_SESSION['vendeur'])):?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=ModArticle">Ajouter article</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-warning" disabled>Vendeur</button>
+                </li>
 
-                <?php elseif(!empty($_SESSION['acheteur'])):?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?module=ModToutparcourir">Notifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?module=ModToutparcourir">Panier</a>
-                    </li>
-                <?php endif; ?>
-                <?php if(!empty($_SESSION)):?>
+            <?php elseif(!empty($_SESSION['acheteur'])):?>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=ModToutparcourir">Notifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?module=ModToutparcourir">Panier</a>
+                </li>
+            <?php endif; ?>
+
+            <?php if(!empty($_SESSION)):?>
 
             </ul>
             <span class="navbar-text">
                 <a class="nav-link lienNav" href="index.php?module=ModConnexion&action=deconnexion">Deconnexion</a>
             </span>
 
-                <span class="navbar-text">
+            <span class="navbar-text">
                 <a class="nav-link" href="index.php?module=ModCompte">Mon compte</a>
             </span>
-            <?php else: ?>
 
+
+            <?php else: ?>
                 </ul>
                 <span class="navbar-text">
                 <a class="nav-link lienNav" href="index.php?module=ModInscription">Inscription</a>

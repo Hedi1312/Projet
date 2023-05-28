@@ -18,9 +18,9 @@ class ModeleConnexion extends Connexion {
         return $requete->fetch();
     }
 
-    public function connexionAdmin($pseudo) {
-        $requete= self::$bdd->prepare("SELECT * from admins where pseudo = :pseudo;");
-        $requete->bindParam('pseudo',$pseudo);
+    public function connexionAdmin($email) {
+        $requete= self::$bdd->prepare("SELECT * from admins where email = :email;");
+        $requete->bindParam('email',$email);
         $requete->execute();
         return $requete->fetch();
     }

@@ -23,8 +23,6 @@ class ContGestionVendeurs {
 
     public function ajouter(){
 
-
-
         $pseudo=$_POST['pseudo'];
         $email=$_POST['email'];
         $nom=$_POST['nom'];
@@ -39,7 +37,6 @@ class ContGestionVendeurs {
 
         move_uploaded_file($origine,$destination);
 
-
         try {
             $this->modele->ajoutVendeur($pseudo,$email,$nom, $destination);
             $this->vue->alerte_message("Un acheteur a été crée avec succès</br>Retour sur <a href='index.php?module=ModGestionVendeurs' class='alert-link'>l'accueil</a>","success","index.php?module=ModGestionVendeurs");
@@ -51,11 +48,14 @@ class ContGestionVendeurs {
     }
 
     public function formSupprimer(){
-        $this->vue->formSupprimer();
+        $listeVendeurs = $this->modele->getListeVendeur();
+        $this->vue->formSupprimer($listeVendeurs);
     }
 
     public function supprimer(){
-
+        $idVendeur = $_GET["id"];
+        $this->modele->supprimerVendeur($idVendeur);
+        header('Location: index.php?module=ModGestionVendeurs&action=form-supprimer');
     }
 
 

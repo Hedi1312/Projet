@@ -1,5 +1,3 @@
-cont_toutparcourir.php
-
 <?php
 
 require_once "Vue/vue_toutparcourir.php";
@@ -7,13 +5,11 @@ require_once "Vue/vue_toutparcourir.php";
 class ContToutparcourir{
     private $vue;
 
-    function __construct()
-    {
+    function __construct(){
         $this->vue = new VueToutparcourir();
     }
 
-    function afficherPageToutparcourir()
-    {
+    function afficherPageToutparcourir(){
         $this->vue->pageToutparcourir();
     }
 }

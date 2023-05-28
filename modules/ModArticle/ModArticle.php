@@ -1,13 +1,13 @@
 <?php
 
-require_once "./modules/ModGestionVendeurs/cont_gestionVendeurs.php";
+require_once "./modules/ModArticle/cont_article.php";
 
-class ModGestionVendeurs{
+class ModArticle{
     private $controleur;
 
     function __construct(){
 
-        $this->controleur = new ContGestionVendeurs();
+        $this->controleur = new ContArticle();
 
         if (isset($_GET['action'])) {
             $action = $_GET['action'];
@@ -18,24 +18,23 @@ class ModGestionVendeurs{
 
         switch ($action) {
             case 'accueil':
-               $this->controleur->accueil();
-               break;
+                $this->controleur->accueil();
+                break;
             case 'form-ajouter':
                 $this->controleur->formAjouter();
                 break;
             case 'ajouter':
                 $this->controleur->ajouter();
                 break;
-            case 'form-supprimer':
-                $this->controleur->formSupprimer();
-                break;
             case 'supprimer':
                 $this->controleur->supprimer();
                 break;
+
             default:
-                header('Location: index.php?module=ModGestionVendeurs');
+                header('Location: index.php?module=ModArticle');
                 break;
         }
     }
-}
 
+
+}

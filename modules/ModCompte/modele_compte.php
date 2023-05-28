@@ -19,10 +19,11 @@ class ModeleCompte extends Connexion {
     }
 
     function getProfilVendeur($email){
-        $requete= self::$bdd->prepare("SELECT * from vendeurs where email = :email;");
+        $requete= self::$bdd->prepare("SELECT vendeurs.pseudo AS pseudo_v,vendeurs.email,nom,img,admins.pseudo AS pseudo_a from vendeurs INNER join admins ON vendeurs.idAdmin=admins.idAdmin where vendeurs.email = :email;");
         $requete->bindParam('email',$email);
         $requete->execute();
         return $requete->fetch();
+
     }
 
     function supprimerLeProfil($email){

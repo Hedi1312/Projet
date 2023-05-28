@@ -1,9 +1,9 @@
 <section class="vh-100 form_log">
-    <h1 id="h1Vendeur">Ajouter acheteur</h1>
+    <h1 id="h1Vendeur">Ajouter vendeur</h1>
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="Vue/Affichage/img/ajouter.png" class="img-fluid form_connexion_img" alt="ajouter acheteur image">
+                <img src="Vue/Affichage/img/autres/ajouter.png" class="img-fluid form_connexion_img" alt="ajouter acheteur image">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form action="index.php?module=ModGestionVendeurs&action=ajouter" method="POST" enctype="multipart/form-data">

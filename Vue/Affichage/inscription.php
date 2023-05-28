@@ -4,7 +4,7 @@
 
             <div class="col-md-9 col-lg-6 col-xl-5">
                 <h2 id="h2inscription">Inscription Acheteur</h2>
-                <img src="Vue/Affichage/img/acheteur.jpg" class="img-fluid" alt="Sample image" id="ins_img">
+                <img src="Vue/Affichage/img/autres/acheteur.jpg" class="img-fluid" alt="Sample image" id="ins_img">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form action="index.php?module=ModInscription&action=inscription" method="POST">
@@ -46,7 +46,7 @@
 
                     <!-- Code postal -->
                     <div class="form-outline mb-3">
-                        <input type="text" id="form3Example7" class="form-control form-control-lg"  placeholder="Code postal" name="codepostal" required/>
+                        <input type="text" id="form3Example7" class="form-control form-control-lg"  placeholder="Code postal" name="codePostal" required/>
                         <label for="form3Example7"></label>
                     </div>
 

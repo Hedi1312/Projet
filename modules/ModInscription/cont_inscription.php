@@ -34,14 +34,14 @@ class ContInscription {
             $adresse1=$_POST['adresse1'];
             $adresse2=$_POST['adresse2'];
             $ville=$_POST['ville'];
-            $codepostal=$_POST['codepostal'];
+            $codePostal=$_POST['codePostal'];
             $pays=$_POST['pays'];
             $numero=$_POST['numero'];
             $email=$_POST['email'];
 
 
             try {
-                $this->modele->inscription($nom,$prenom,$pseudo,$adresse1,$adresse2,$ville,$codepostal,$pays,$numero,$email,$mdp);
+                $this->modele->inscription($nom,$prenom,$pseudo,$adresse1,$adresse2,$ville,$codePostal,$pays,$numero,$email,$mdp);
                 $this->vue->alerte_message("Votre compte a été crée avec succès</br>Veuillez vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter</a>","success","index.php?module=ModConnexion");
             }
             catch (Exception $e) {

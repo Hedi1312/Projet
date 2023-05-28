@@ -3,7 +3,7 @@
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="Vue/Affichage/img/vendeur.png" class="img-fluid form_connexion_img" alt="vendeur image" >
+                <img src="Vue/Affichage/img/autres/vendeur.png" class="img-fluid form_connexion_img" alt="vendeur image" >
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form action="index.php?module=ModConnexion&action=connexionVendeur" method="POST">

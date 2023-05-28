@@ -2,7 +2,7 @@
     <h2 id="h2connexionAccueil">Vous êtes un :  </h2>
 
     <div class="col-md-9 col-lg-6 col-xl-5 i" id="imageConnexion">
-        <img src="Vue/Affichage/img/ecommerce.png" class="img-fluid" alt="image connexion">
+        <img src="Vue/Affichage/img/autres/ecommerce.png" class="img-fluid" alt="image connexion">
     </div>
     <div class="container" id="buttonConnexionAccueil">
         <a class="btn btn-success btn-lg" id="buttonAcheteur" href="index.php?module=ModConnexion&action=formulaireAcheteur" role="button" aria-disabled="true">Acheteur</a>

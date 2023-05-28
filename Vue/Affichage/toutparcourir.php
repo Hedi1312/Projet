@@ -7,15 +7,15 @@
                     <h3 class="classe-h3">Articles rares</h3>
                     <div class="articles">
                         <div class="article" data-categorie="rare" data-achat="immédiat">
-                            <img src="Vue/Affichage/img/carte_graphique.png" class="d-block w-100" alt="Carte Graphique">
+                            <img src="Vue/Affichage/img/articles/carte_graphique/carte_graphique.png" class="d-block w-100" alt="Carte Graphique">
                             <p>Carte Graphique - Nvidia GeForce RTX 4090 - Asus ROG</p>
                         </div>
                         <div class="article" data-categorie="rare" data-achat="transaction">
-                            <img src="Vue/Affichage/img/ram.png" class="d-block w-100" alt="Barette de RAM">
+                            <img src="Vue/Affichage/img/articles/ram/ram.png" class="d-block w-100" alt="Barette de RAM">
                             <p>Barette de RAM - Corsair Vengence DDR5 4x48 Go @5200 MHz</p>
                         </div>
                         <div class="article" data-categorie="rare" data-achat="offre">
-                            <img src="Vue/Affichage/img/processeur.png" class="d-block w-100" alt="Processeur">
+                            <img src="Vue/Affichage/img/articles/processeur/processeur.png" class="d-block w-100" alt="Processeur">
                             <p>Processeur - Intel Core i9 @5.8 GHz</p>
                         </div>
                     </div>
@@ -28,11 +28,11 @@
                             <p>Téléphone - iPhone 14 Pro Max - 128 Go - Violet Intense</p>
                         </div>
                         <div class="article" data-categorie="haut-de-gamme" data-achat="transaction">
-                            <img src="Vue/Affichage/img/macbook.png" class="d-block w-100" alt="Macbook">
+                            <img src="Vue/Affichage/img/articles/macbook/macbook.png" class="d-block w-100" alt="Macbook">
                             <p>Laptop - MacBook Pro 16" - M2 Max - 32 Go - SSD 1 To</p>
                         </div>
                         <div class="article" data-categorie="haut-de-gamme" data-achat="offre">
-                            <img src="Vue/Affichage/img/frigo.png" class="d-block w-100" alt="Frigo">
+                            <img src="Vue/Affichage/img/articles/frigo/frigo.png" class="d-block w-100" alt="Frigo">
                             <p>Frigo - Samsung Smart Fridge - Carbon Black</p>
                         </div>
                     </div>
@@ -41,15 +41,15 @@
                     <h3 class="classe-h3">Articles réguliers</h3>
                     <div class="articles">
                         <div class="article" data-categorie="régulier" data-achat="immédiat">
-                            <img src="Vue/Affichage/img/casque.png" class="d-block w-100" alt="Casque">
+                            <img src="Vue/Affichage/img/articles/casque/casque.png" class="d-block w-100" alt="Casque">
                             <p>Casque - Logitech G Pro X - League of Legends Edition</p>
                         </div>
                         <div class="article" data-categorie="régulier" data-achat="transaction">
-                            <img src="Vue/Affichage/img/clavier.png" class="d-block w-100" alt="Clavier">
+                            <img src="Vue/Affichage/img/articles/clavier/clavier.png" class="d-block w-100" alt="Clavier">
                             <p>Clavier - Logitech G915 Lightspeed TKL - Switch GL Tactile</p>
                         </div>
                         <div class="article" data-categorie="régulier" data-achat="offre">
-                            <img src="Vue/Affichage/img/souris.png" class="d-block w-100"" alt="Souris">
+                            <img src="Vue/Affichage/img/articles/souris/souris.png" class="d-block w-100"" alt="Souris">
                             <p>Souris - Logitech G502 Lightspeed</p>
                         </div>
                     </div>

@@ -29,7 +29,6 @@ class ContCompte {
 
     public function supprimerProfil($email){
         $this->modele->supprimerLeProfil($email);
-        $this->vue->alerte_message("Vous venez de supprimer votre compte</br>Veuillez vous <a href='index.php?module=ModConnexion' class='alert-link'>connecter</a>","danger","index.php?module=ModConnexion");
     }
 
 

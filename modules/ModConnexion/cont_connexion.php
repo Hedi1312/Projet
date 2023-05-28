@@ -81,12 +81,11 @@ class ContConnexion {
         $pseudo=$_POST['pseudo'];
         $email=$_POST['email'];
         $mdp=$_POST['mdp'];
-        $user=$this->modele->connexionAdmin($pseudo);
+        $user=$this->modele->connexionAdmin($email);
         if(!empty($user)) {
-            $count=password_verify($email,$user['email']);
-            $count2=password_verify($mdp,$user['mdp']);
+            $count=password_verify($mdp,$user['mdp']);
 
-            if($count && $count2) {
+            if($count) {
                 $_SESSION['admin']=$email;
                 header('Location: index.php?module=ModAccueil');
 

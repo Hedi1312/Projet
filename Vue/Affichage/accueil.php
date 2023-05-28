@@ -19,19 +19,19 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
-                    <img src="Vue/Affichage/img/processeur.png" class="rounded mx-auto d-block" alt="Casque G Pro" style="object-fit: cover; height: 500px;">
+                    <img src="Vue/Affichage/img/articles/processeur/processeur.png" class="rounded mx-auto d-block" alt="Casque G Pro" style="object-fit: cover; height: 500px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="classe-h5">Processeur</h5>
                     </div>
                 </div>
                 <div class="carousel-item text-center">
-                    <img src="Vue/Affichage/img/iphone.png" class="rounded mx-auto d-block" alt="iPhone14" style="object-fit: cover; height: 500px;">
+                    <img src="Vue/Affichage/img/articles/iphone/iphone_1.png" class="rounded mx-auto d-block" alt="iPhone14" style="object-fit: cover; height: 500px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="classe-h5">iPhone 14 Pro Max</h5>
                     </div>
                 </div>
                 <div class="carousel-item text-center">
-                    <img src="Vue/Affichage/img/ram.png" class="rounded mx-auto d-block" alt="LogitechG502" style="object-fit: cover; height: 500px;">
+                    <img src="Vue/Affichage/img/articles/ram/ram.png" class="rounded mx-auto d-block" alt="LogitechG502" style="object-fit: cover; height: 500px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="classe-h5">RAM</h5>
                     </div>
@@ -51,7 +51,7 @@
 
 
     <section id="contact-section" class="section">
-        <h2 class="classe-h3">Contact</h2>
+        <h2 class="classe-h2">Contact</h2>
         <p>
             &#x1F4E7; Contactez-nous : <a href="mailto:contact@efreimarketplace.com">contact@efreimarketplace.com</a>
         </p>
@@ -68,7 +68,7 @@
     <section id="google_maps" class="section">
         <h2 class="classe-h2">Localisation</h2>
         <a href="https://www.google.com/maps/place/Efrei/@48.7887182,2.3615626,17z/data=!4m10!1m2!2m1!1sefrei+villejuif!3m6!1s0x47e673e24e04a9c3:0xc55cb3e676f95321!8m2!3d48.7887182!4d2.3637513!15sCg9lZnJlaSB2aWxsZWp1aWaSAQ9wcml2YXRlX2NvbGxlZ2XgAQA!16zL20vMDVtcHk0" target="_blank">
-        <img src="Vue/Affichage/img/efrei_marketplace_googlemaps.png" class="rounded mx-auto d-block" alt="google maps" width="300" height="200">
+        <img src="Vue/Affichage/img/autres/efrei_marketplace_googlemaps.png" class="rounded mx-auto d-block" alt="google maps" width="300" height="200">
         </a>
     </section>
 
